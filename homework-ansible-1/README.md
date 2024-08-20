@@ -48,6 +48,20 @@
 6. Повторяю запуск playbook
 <img width="941" alt="Снимок экрана 2024-08-20 в 21 59 56" src="https://github.com/user-attachments/assets/0287eb92-8b81-4f49-81ce-bb927b42fd05">
 
-7. 
+7. При помощи ansible-vault зашифровываю факты в group_vars/deb и group_vars/el с паролем netology:
+
+<img width="780" alt="Снимок экрана 2024-08-20 в 22 09 49" src="https://github.com/user-attachments/assets/e0bc48a5-9d09-4037-a43c-edb891070e62">
+<img width="1017" alt="Снимок экрана 2024-08-20 в 22 13 04" src="https://github.com/user-attachments/assets/429bb9bd-40ed-433c-91a5-0253b1feec26">
+
+8.Запускаю playbook на окружении prod.yml. При запуске ansible запрашивается пароль:
+
+<img width="951" alt="Снимок экрана 2024-08-20 в 22 12 33" src="https://github.com/user-attachments/assets/911b382e-1002-4408-af91-8864dab84b97">
+
+9.Запускаю ansible-doc. Для этой ситуации подходит встроенный плагин - ansible.builtin.local
+
+<img width="744" alt="Снимок экрана 2024-08-20 в 22 15 14" src="https://github.com/user-attachments/assets/485ce2fa-1520-4045-94a1-ff5a570a8753">
+
+10.
+
 
 
