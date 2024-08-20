@@ -21,7 +21,7 @@
 
 <img width="929" alt="Снимок экрана 2024-08-20 в 20 39 24" src="https://github.com/user-attachments/assets/c5995178-a3e8-4376-b5bd-801225ba53df">
 
-2.Найдите файл с переменными и меняю его на all default fact:
+2.Нахожу файл с переменными и меняю его на all default fact:
 
 <img width="942" alt="Снимок экрана 2024-08-20 в 20 43 09" src="https://github.com/user-attachments/assets/382f414a-d89f-4c22-9677-5c34d760d680">
 
