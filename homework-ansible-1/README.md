@@ -99,10 +99,11 @@
 
 <img width="948" alt="Снимок экрана 2024-08-20 в 22 46 59" src="https://github.com/user-attachments/assets/5e61eec7-f160-4e66-b437-d127b8086b8d">
 
-4. Добавляю новую группу хостов fedora, создаю для неё переменную:
+4. Добавляю новую группу хостов fedora, создаю для неё переменную. Запускаю плейбук - подключение к fedora успешное:
 
 <img width="499" alt="Снимок экрана 2024-08-20 в 22 49 45" src="https://github.com/user-attachments/assets/0ce02566-0a05-42e8-967f-3e97bddc8b64">
-
+<img width="364" alt="Снимок экрана 2024-08-20 в 22 58 06" src="https://github.com/user-attachments/assets/5617d1a0-3ade-4120-95e5-4e3718e837f6">
+<img width="418" alt="Снимок экрана 2024-08-20 в 22 58 40" src="https://github.com/user-attachments/assets/897d5907-c5ed-476d-90f6-33ecc7969009">
 
 
 
