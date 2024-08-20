@@ -12,7 +12,8 @@
 
 3. Скачиваю и переношу playbook в свой репозиторий
 
-
+<img width="726" alt="Снимок экрана 2024-08-20 в 20 30 04" src="https://github.com/user-attachments/assets/b07674b3-9c88-4866-9d65-0b3fcc30b3ae">
+<img width="764" alt="Снимок экрана 2024-08-20 в 20 29 39" src="https://github.com/user-attachments/assets/60113652-0d50-46fa-a88c-a62799538bb1">
 
 # Задание 1
 
