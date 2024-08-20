@@ -85,7 +85,29 @@
 
 # Необязательная часть
 
-1. 
+1. При помощи ansible-vault расшифровываю все зашифрованные файлы с переменными:
+
+<img width="777" alt="Снимок экрана 2024-08-20 в 22 36 07" src="https://github.com/user-attachments/assets/74623f37-3195-4ab6-b78b-03c392fd4593">
+<img width="885" alt="Снимок экрана 2024-08-20 в 22 37 06" src="https://github.com/user-attachments/assets/b60ac913-0b4d-45b9-9a3e-5f7e12d591aa">
+
+
+2. Зашифровываю отдельное значение PaSSw0rd для переменной some_fact паролем netology. Добавляю полученное значение в group_vars/all/example.yml.
+
+<img width="740" alt="Снимок экрана 2024-08-20 в 22 40 59" src="https://github.com/user-attachments/assets/a744e7f9-89fe-4e64-b8f2-b8a19b4162f2">
+
+3. Запускаю playbook:
+
+<img width="948" alt="Снимок экрана 2024-08-20 в 22 46 59" src="https://github.com/user-attachments/assets/5e61eec7-f160-4e66-b437-d127b8086b8d">
+
+4. Добавляю новую группу хостов fedora, создаю для неё переменную:
+
+<img width="499" alt="Снимок экрана 2024-08-20 в 22 49 45" src="https://github.com/user-attachments/assets/0ce02566-0a05-42e8-967f-3e97bddc8b64">
+
+
+
+
+
+
 
 
 
