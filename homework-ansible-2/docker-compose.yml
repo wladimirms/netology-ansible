@@ -1,0 +1,12 @@
+version: "3"
+services:
+  clickhouse-01:
+    container_name: clickhouse-01
+    image: pycontribs/ubuntu:latest
+    restart: on-failure
+    command: ["sleep", "infinity"]
+  vector-01:
+    container_name: vector-01
+    image: pycontribs/ubuntu:latest
+    restart: on-failure
+    command: ["sleep", "infinity"]
