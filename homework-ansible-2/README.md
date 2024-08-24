@@ -68,13 +68,10 @@ Playbook производит установку и приложений на с
 ## Variables
 В каталоге group_vars задаются следующие переменные.
 
-|Столбец 1|Столбец 2|Столбец 3|
-|-|--------|---|
-|Длинная запись в первом столбце|Запись в столбце 2|Запись в столбце 3|
-|Кртк зпс| |Слева нет записи|
-
-clickhouse_version	версия clickhous
-vector_version	версия vector
+|clickhouse_version|версия clickhouse|
+|vector_version|версия vector|
+|vector_config|директория конфига vector|
+|vector_service_config|директория systemd юнита|
 
 ## Install Clickhouse
 Скачиваются rpm пакеты, устанавливается Clickhouse, создается база logs.
