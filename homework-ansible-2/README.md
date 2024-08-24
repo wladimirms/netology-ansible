@@ -68,6 +68,8 @@ Playbook производит установку и приложений на с
 ## Variables
 В каталоге group_vars задаются следующие переменные.
 
+|vars|value|
+|-|--------|
 |clickhouse_version|версия clickhouse|
 |vector_version|версия vector|
 |vector_config|директория конфига vector|
