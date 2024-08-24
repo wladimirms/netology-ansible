@@ -57,7 +57,11 @@ Playbook производит установку и приложений на с
   > https://hub.docker.com/r/pycontribs/fedora <br>
   > https://hub.docker.com/_/fedora
 В playbook используются следующие модули:
-
+ * ansible.builtin.get_url,
+ * ansible.builtin.template,
+ * ansible.builtin.anarchive,
+ * ansible.builtin.file
+ * ansible.builtin.copy
   
 ### Clickhouse
 * установка clickhouse
