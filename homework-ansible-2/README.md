@@ -56,6 +56,7 @@ Playbook производит установку и приложений на с
 Рекомендуется установка на fedora:latest, pycontribs/fedora:latest
   > https://hub.docker.com/r/pycontribs/fedora <br>
   > https://hub.docker.com/_/fedora <br>
+
 В playbook используются следующие модули:
  * ansible.builtin.get_url,
  * ansible.builtin.template,
