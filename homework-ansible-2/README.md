@@ -43,10 +43,10 @@
 
 9. Подготовливаю README.md-файл по своему playbook. Далее вставил документацию:
 
-=
+
 # netology-ansible/clickhouse-vector-app
 ## Инфраструктура
-=
+-----
 
 10. Готовый README.md размещаю в личном репозитории github.
 
