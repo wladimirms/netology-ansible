@@ -23,6 +23,7 @@
 <img width="951" alt="Снимок экрана 2024-08-24 в 18 18 44" src="https://github.com/user-attachments/assets/47dcaf7c-2036-4784-b96d-cc23792703df">
 
 Создаю play для vector:
+
 <img width="676" alt="Снимок экрана 2024-08-24 в 18 20 01" src="https://github.com/user-attachments/assets/78a46585-bbce-4acb-bd6b-a6e8f94b8186">
 
 Создаю необходимые group_vars и services:
