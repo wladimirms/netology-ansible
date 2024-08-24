@@ -47,24 +47,31 @@
 # netology-ansible/clickhouse-vector-app
 ## Инфраструктура
 * Сервер clickhouse-01 для сбора логов;
+  > https://clickhouse.com/docs/ru
 * Сервер vector-01 для обработки логов.
-Playbook
-Playbook производит установку и настройку следующих приложений на указанных серверах.
+  > https://vector.dev/docs/setup/installation/
 
-## Clickhouse
+## Playbook
+Playbook производит установку и приложений на серверах. По умолчанию развертывание приложений предусмотрено для rpm-based образов.
+Рекомендуется установка на fedora:latest, pycontribs/fedora:latest
+  > https://hub.docker.com/r/pycontribs/fedora
+  > https://hub.docker.com/_/fedora
+  
+### Clickhouse
 * установка clickhouse
 * создание базы данных и таблицы в ней
 
-## Vector
+### Vector
 * установка vector
 * изменение конфигов приложения
   
 ## Variables
-В каталоге group_vars задаются необходимые версии дистрибутивов.
+В каталоге group_vars задаются следующие переменные.
 
 clickhouse_version	версия clickhous
 vector_version	версия vector
-Install Clickhouse
+
+## Install Clickhouse
 Скачиваются rpm пакеты, устанавливается Clickhouse, создается база logs.
 
 Через group_vars можно задать следующие параметры:
@@ -73,7 +80,19 @@ clickhouse_version, vector_version - версии устанавливаемых
 clickhouse_database_name - имя базы данных для хранения логов;
 clickhouse_create_table - структуру таблицы для хранения логов;
 vector_config - содержимое конфигурационного файла для приложения vector;
-Tags
+
+## Install Vector
+
+Скачиваются rpm пакеты, устанавливается Clickhouse, создается база logs.
+
+Через group_vars можно задать следующие параметры:
+
+clickhouse_version, vector_version - версии устанавливаемых приложений;
+clickhouse_database_name - имя базы данных для хранения логов;
+clickhouse_create_table - структуру таблицы для хранения логов;
+vector_config - содержимое конфигурационного файла для приложения vector;
+
+## Tags
 clickhouse	производит полную конфигурацию сервера clickhouse-01
 vector	производит полную конфигурацию сервера vector-01
 clickhouse_db производит конфигурацию базы данных и таблицы;
