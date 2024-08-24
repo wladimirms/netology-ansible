@@ -5,18 +5,42 @@
 1. Изучаю документацию по vector и clickhouse
 2. Использую новую директорию в предыдущем репозитории netology-ansible. Подготавливаю окружение - создаю новый компоуз-файл:
 
-<img width="383" alt="Снимок экрана 2024-08-21 в 22 10 45" src="https://github.com/user-attachments/assets/4893ceaf-6b46-4a6f-a3b4-c369819a045f">
+<img width="363" alt="Снимок экрана 2024-08-24 в 18 14 53" src="https://github.com/user-attachments/assets/3caaa2b4-20dd-4c6e-bb9d-97c3312229be">
 
-3. Поднимаю окружение в docker и устанавливаю python3.8
+3. Поднимаю окружение в docker из образов pycontribs fedora с предустановленным python:
 
-<img width="981" alt="Снимок экрана 2024-08-21 в 22 11 02" src="https://github.com/user-attachments/assets/5415305e-cdde-466f-831a-ac904d9d48b9">
+<img width="797" alt="Снимок экрана 2024-08-24 в 18 15 40" src="https://github.com/user-attachments/assets/40374391-a247-46a9-9dee-0912e2dc7f31">
 
 # Основная часть
 
 1. Подготавливаю свой inventory-файл prod.yml.
 
-<img width="354" alt="Снимок экрана 2024-08-21 в 22 12 16" src="https://github.com/user-attachments/assets/52fba09c-94f3-45ad-ba27-843cf912ba43">
+<img width="322" alt="Снимок экрана 2024-08-24 в 18 17 09" src="https://github.com/user-attachments/assets/4bbb4661-ac42-4170-997f-a1294065e00d">
 
-2/3/4. Дописываю playbook: добавляю play c task с использованием модулей ansible.builtin.get_url, ansible.builtin.template, ansible.builtin.anarchive, ansible.builtin.file:
+2/3/4. Дописываю playbook: добавляю play c task с использованием модулей ansible.builtin.get_url, ansible.builtin.template, ansible.builtin.anarchive, ansible.builtin.file, ansible.builtin.copy:
 
-5. 
+Произвожу необходимые изменения для play с clickhouse:
+<img width="951" alt="Снимок экрана 2024-08-24 в 18 18 44" src="https://github.com/user-attachments/assets/47dcaf7c-2036-4784-b96d-cc23792703df">
+
+Создаю play для vector:
+<img width="676" alt="Снимок экрана 2024-08-24 в 18 20 01" src="https://github.com/user-attachments/assets/78a46585-bbce-4acb-bd6b-a6e8f94b8186">
+
+Создаю необходимые group_vars и services:
+<img width="891" alt="Снимок экрана 2024-08-24 в 18 21 33" src="https://github.com/user-attachments/assets/17f2c93a-d3ea-4108-93a4-79e897b293f5">
+<img width="896" alt="Снимок экрана 2024-08-24 в 18 22 19" src="https://github.com/user-attachments/assets/c8550875-6abb-476f-82a2-f8a150f81244">
+
+5. Запускаю ansible-lint site.yml и исправляю ошибки:
+<img width="737" alt="Снимок экрана 2024-08-24 в 15 55 31" src="https://github.com/user-attachments/assets/eca9880b-b1dd-400c-9c84-8fb00d0f6274">
+
+6. Запускаю playbook с флагом --check:
+<img width="813" alt="Снимок экрана 2024-08-24 в 18 28 05" src="https://github.com/user-attachments/assets/249163e0-4db0-4b5e-abb6-dc4a28992760">
+
+7. Запускаю playbook с флагом --diff:
+<img width="817" alt="Снимок экрана 2024-08-24 в 18 27 36" src="https://github.com/user-attachments/assets/1d67bfc5-de70-4151-ba91-1f7a25cde5d5">
+Ошибка возникает в самом ansible из-за проблем с совместимостью и багов docker desktop с процессорами M1. Ранее неоднократно встречался с подобной проблемой. В качестве решения требуется переход на ОС Linux с процессорной архитектурой x86-64.
+
+9. Подготовливаю README.md-файл по своему playbook. Далее вставил документацию:
+
+
+10. Готовый README.md размещаю в личном репозитории github.
+
