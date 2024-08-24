@@ -2,11 +2,13 @@ version: "3"
 services:
   clickhouse-01:
     container_name: clickhouse-01
-    image: pycontribs/fedora:latest
+    image: pycontribs/centos:latest
+    privileged: true
     restart: on-failure
     command: ["sleep", "infinity"]
   vector-01:
     container_name: vector-01
-    image: pycontribs/ubuntu:latest
+    image: pycontribs/fedora:latest
+    privileged: true
     restart: on-failure
     command: ["sleep", "infinity"]
