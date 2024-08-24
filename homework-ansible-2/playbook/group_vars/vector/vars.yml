@@ -1,3 +1,4 @@
 ---
 vector_version: "0.40.0"
 vector_service_dir: "/lib/systemd/system"
+vector_config_dir: "/etc/vector"
