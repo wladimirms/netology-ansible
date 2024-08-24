@@ -56,6 +56,8 @@ Playbook производит установку и приложений на с
 Рекомендуется установка на fedora:latest, pycontribs/fedora:latest
   > https://hub.docker.com/r/pycontribs/fedora <br>
   > https://hub.docker.com/_/fedora
+В playbook используются следующие модули:
+
   
 ### Clickhouse
 * установка clickhouse
@@ -65,7 +67,7 @@ Playbook производит установку и приложений на с
 * установка vector
 * изменение конфигов приложения
   
-## Variables
+### Variables
 В каталоге group_vars задаются следующие переменные.
 
 |vars|value|
@@ -76,34 +78,40 @@ Playbook производит установку и приложений на с
 |vector_service_config|директория systemd юнита|
 
 ## Install Clickhouse
-Скачиваются rpm пакеты, устанавливается Clickhouse, создается база logs.
+1. Скачивание rpm-пакетов
+2. Установка Clickhouse
+3. Создание базы данных logs.
 
 Через group_vars можно задать следующие параметры:
-
-clickhouse_version, vector_version - версии устанавливаемых приложений;
-clickhouse_database_name - имя базы данных для хранения логов;
-clickhouse_create_table - структуру таблицы для хранения логов;
-vector_config - содержимое конфигурационного файла для приложения vector;
+* clickhouse_version - версия clickhouse
 
 ## Install Vector
 
-Скачиваются rpm пакеты, устанавливается Clickhouse, создается база logs.
+1. Скачивание rpm-пакетов
+2. Установка Clickhouse
+3. Создание базы данных logs.
 
 Через group_vars можно задать следующие параметры:
+* vector_version - версия vector
+* vector_config - директория конфига vector
+* vector_service_config - директория systemd юнита
 
-clickhouse_version, vector_version - версии устанавливаемых приложений;
-clickhouse_database_name - имя базы данных для хранения логов;
-clickhouse_create_table - структуру таблицы для хранения логов;
-vector_config - содержимое конфигурационного файла для приложения vector;
-
-## Tags
-clickhouse	производит полную конфигурацию сервера clickhouse-01
-vector	производит полную конфигурацию сервера vector-01
-clickhouse_db производит конфигурацию базы данных и таблицы;
-vector_config производит изменение в конфиге приложения vector;
-drop_clickhouse_database_logs удаляет базу данных (по умолчанию не выполняется);
-
-
+## Установка и развертывание
+* Для развертывания серверов использовать следующую команду:
+  ```
+  docker-compose up -d
+  ```
+* Для установки приложений:
+  ```
+  ansible-playbook inventory/prod.yml site2.yml
+  ```
+* Для проверки конфигурации:
+  ```
+  ansible-playbook inventory/prod.yml site2.yml --check
+  ```
+  ```
+  ansible-playbook inventory/prod.yml site2.yml --diff
+  ```
 -----
 10. Готовый README.md размещаю в личном репозитории github.
 
