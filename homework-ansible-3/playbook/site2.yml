@@ -26,9 +26,9 @@
       ansible.builtin.dnf:
         disable_gpg_check: true
         name:
-          - clickhouse-common-static_{{ clickhouse_version }}.amd64.deb
-          - clickhouse-client_{{ clickhouse_version }}.amd64.deb
-          - clickhouse-server_{{ clickhouse_version }}.amd64.deb
+          - clickhouse-common-static_{{ clickhouse_version }}.rpm
+          - clickhouse-client_{{ clickhouse_version }}.rpm
+          - clickhouse-server_{{ clickhouse_version }}.rpm
       notify: Start clickhouse service
     - name: Flush handlers
       ansible.builtin.meta: flush_handlers
