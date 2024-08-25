@@ -1,0 +1,9 @@
+---
+lighthouse_git_repo: "https://github.com/VKCOM/lighthouse.git"
+lighthouse_data: "/home/nolar/lighthouse/"
+nginx_user: www-data
+lighthouse_packages:
+  - nginx
+  - git
+lighthouse_port: 8080
+lighthouse_conf: "lighthouse.conf"
